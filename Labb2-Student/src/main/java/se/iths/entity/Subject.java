@@ -17,6 +17,12 @@ public class Subject {
     @OneToOne
     private Teacher teacher;
 
+    public Subject(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Subject() {}
 
     public void addStudent(Student student) {
         students.add(student);
