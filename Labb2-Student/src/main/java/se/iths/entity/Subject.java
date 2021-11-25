@@ -14,11 +14,10 @@ public class Subject {
     private Student student;
     @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL)
     private List<Student> students = new ArrayList<>();
-    @OneToOne
+    @ManyToOne
     private Teacher teacher;
 
-    public Subject(Long id, String name) {
-        this.id = id;
+    public Subject(String name) {
         this.name = name;
     }
 

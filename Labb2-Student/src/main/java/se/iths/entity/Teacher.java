@@ -12,7 +12,7 @@ public class Teacher {
     private String firstName;
     private String lastName;
     @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL)
-    private List<Student> students = new ArrayList<>();
+    private List<Subject> subjects = new ArrayList<>();
 
     public Teacher(String firstName, String lastName) {
         this.firstName = firstName;
@@ -21,9 +21,9 @@ public class Teacher {
 
     public Teacher() {}
 
-    public void addStudent(Student student) {
-        students.add(student);
-        student.setTeacher(this);
+    public void addSubject(Subject subject) {
+        subjects.add(subject);
+        subject.setTeacher(this);
     }
 
     public Long getId() {
@@ -48,14 +48,6 @@ public class Teacher {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public List<Student> getStudents() {
-        return students;
-    }
-
-    public void setStudents(List<Student> students) {
-        this.students = students;
     }
 }
 

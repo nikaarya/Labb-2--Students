@@ -17,14 +17,14 @@ public class TeacherRest {
     @Inject
     TeacherService teacherService;
 
-    @Path("createteacher")
+    @Path("")
     @POST
     public Response createTeacher(Teacher teacher) {
         teacherService.createNewTeacher(teacher);
         return Response.ok(teacher).build();
     }
 
-    @Path("getallteachers")
+    @Path("")
     @GET
     public Response getAllTeachers() {
         List<Teacher> listOfTeachers = teacherService.getAllTeachers();

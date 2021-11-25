@@ -17,14 +17,14 @@ public class SubjectRest {
     @Inject
     SubjectService subjectService;
 
-    @Path("createsubject")
+    @Path("")
     @POST
     public Response createSubject(Subject subject) {
         subjectService.createSubject(subject);
         return Response.ok(subject).build();
     }
 
-    @Path("getallsubjects")
+    @Path("")
     @GET
     public Response getAllSubjects() {
         List<Subject> listOfSubjects = subjectService.getAllSubjects();

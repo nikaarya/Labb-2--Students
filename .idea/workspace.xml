@@ -10,8 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8352742b-d634-4ea0-a7f2-e7856d35c59e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Labb2-Student/src/main/java/se/iths/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/Labb2-Student/src/main/java/se/iths/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Labb2-Student/src/main/java/se/iths/entity/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/Labb2-Student/src/main/java/se/iths/entity/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0cbf73dcd36ccfc4b734583757fc6f1e83aade11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/15cb8a099bc3d9ebcd66e616177f7d19727f621a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/f/1f323753c59d6af69fb09936894544603392aba6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/228d4c625199399c736a6ac6b6420440dbf3ee34" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/691a88d12be5637f6d1d83e832d931ede2f8a7e4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/0/c038649ff58a165dd2cd9a5cadd37a7726737d77" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3c0757f9370876846008f0257c6ba373c380ca6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +155,7 @@
       <workItem from="1637591120694" duration="9999000" />
       <workItem from="1637751079843" duration="75000" />
       <workItem from="1637751200536" duration="117000" />
+      <workItem from="1637837899350" duration="72000" />
     </task>
     <servers />
   </component>
