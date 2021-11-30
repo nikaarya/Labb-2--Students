@@ -17,8 +17,8 @@ public class SubjectService {
     EntityManager entityManager;
 
     public Subject createSubject(Subject subject) {
-        subject.addStudent(new Student("Nika", "Arya", "nika@elev.se", "0709876543"));
-        subject.addStudent(new Student("Pelle", "Persson", "pelle@elev.se", "0709876544"));
+//        subject.addStudent(new Student("Nika", "Arya", "nika@elev.se", "0709876543"));
+//        subject.addStudent(new Student("Pelle", "Persson", "pelle@elev.se", "0709876544"));
 
         //subject.addTeacher(new Teacher("Annika", "Pettersson"));
         entityManager.persist(subject);

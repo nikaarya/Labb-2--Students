@@ -16,8 +16,8 @@ public class StudentService {
     EntityManager entityManager;
 
     public Student createNewStudent(Student student) {
-        student.addSubject(new Subject("Science"));
-        student.addSubject(new Subject("PE"));
+//        student.addSubject(new Subject("Science"));
+//        student.addSubject(new Subject("PE"));
 
         entityManager.persist(student);
         return student;

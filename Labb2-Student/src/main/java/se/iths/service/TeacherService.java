@@ -16,8 +16,8 @@ public class TeacherService {
 
     public Teacher createNewTeacher(Teacher teacher) {
 
-        teacher.addSubject(new Subject("Math"));
-        teacher.addSubject(new Subject("English"));
+//        teacher.addSubject(new Subject("Math"));
+//        teacher.addSubject(new Subject("English"));
 
         entityManager.persist(teacher);
         return teacher;
