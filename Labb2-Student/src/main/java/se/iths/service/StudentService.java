@@ -2,6 +2,7 @@ package se.iths.service;
 
 
 import se.iths.entity.Student;
+import se.iths.entity.Subject;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -14,8 +15,12 @@ public class StudentService {
     @PersistenceContext
     EntityManager entityManager;
 
-    public void createNewStudent(Student student) {
+    public Student createNewStudent(Student student) {
+        student.addSubject(new Subject("Science"));
+        student.addSubject(new Subject("PE"));
+
         entityManager.persist(student);
+        return student;
     }
 
     public Student updateStudentEmail(Long id, String email) {
@@ -38,4 +43,6 @@ public class StudentService {
         Student findStudent = entityManager.find(Student.class, id);
         entityManager.remove(findStudent);
     }
+
+
 }

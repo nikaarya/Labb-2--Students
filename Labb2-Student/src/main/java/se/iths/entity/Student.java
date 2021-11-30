@@ -1,11 +1,10 @@
 package se.iths.entity;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @Entity
 public class Student {
@@ -21,12 +20,10 @@ public class Student {
     private String email;
     @Size(max = 10)
     private String phoneNumber;
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
-    private List<Subject> subjects = new ArrayList<>();
-    @ManyToOne
-    private Subject subject;
-    @ManyToOne
-    private Teacher teacher;
+
+    @ManyToMany(mappedBy = "students", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private Set<Subject> subjects = new HashSet<>();
+
 
     public Student(String firstName, String lastName, String email, String phoneNumber) {
         this.firstName = firstName;
@@ -39,7 +36,7 @@ public class Student {
 
     public void addSubject(Subject subject) {
         subjects.add(subject);
-        subject.setStudent(this);
+        subject.getStudents().add(this);
     }
 
     public Long getId() {
@@ -81,28 +78,9 @@ public class Student {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-
-    public List<Subject> getSubjects() {
+    @JsonbTransient
+    public Set<Subject> getSubjects() {
         return subjects;
     }
 
-    public void setSubjects(List<Subject> subjects) {
-        this.subjects = subjects;
-    }
-
-    public Subject getSubject() {
-        return subject;
-    }
-
-    public void setSubject(Subject subject) {
-        this.subject = subject;
-    }
-
-    public Teacher getTeacher() {
-        return teacher;
-    }
-
-    public void setTeacher(Teacher teacher) {
-        this.teacher = teacher;
-    }
 }

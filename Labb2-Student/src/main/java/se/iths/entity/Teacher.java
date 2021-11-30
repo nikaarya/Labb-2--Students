@@ -1,8 +1,11 @@
 package se.iths.entity;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Teacher {
@@ -11,8 +14,9 @@ public class Teacher {
     private Long id;
     private String firstName;
     private String lastName;
+
     @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL)
-    private List<Subject> subjects = new ArrayList<>();
+    private Set<Subject> subjects = new HashSet<>();
 
     public Teacher(String firstName, String lastName) {
         this.firstName = firstName;
@@ -49,6 +53,15 @@ public class Teacher {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    public Set<Subject> getSubjects() {
+        return subjects;
+    }
+
+    public void setSubjects(Set<Subject> subjects) {
+        this.subjects = subjects;
+    }
+
 }
 
 
