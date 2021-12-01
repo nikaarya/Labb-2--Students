@@ -16,7 +16,7 @@ public class Subject {
 
     @ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private Set<Student> students = new HashSet<>();
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Teacher teacher;
 
     public Subject(String name) {
@@ -28,11 +28,6 @@ public class Subject {
     public void addStudent(Student student) {
         students.add(student);
         student.getSubjects().add(this);
-    }
-
-    public void addTeacher(Teacher teacher) {
-        setTeacher(this.teacher);
-
     }
 
     public Long getId() {
@@ -50,12 +45,16 @@ public class Subject {
     public void setName(String name) {
         this.name = name;
     }
-
+    
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
     }
 
-    @JsonbTransient
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    //@JsonbTransient
     public Set<Student> getStudents() {
         return students;
     }

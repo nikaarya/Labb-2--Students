@@ -14,13 +14,16 @@ public class Teacher {
     private Long id;
     private String firstName;
     private String lastName;
+    private String mainSubject;
+
 
     @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL)
     private Set<Subject> subjects = new HashSet<>();
 
-    public Teacher(String firstName, String lastName) {
+    public Teacher(String firstName, String lastName, String mainSubject) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.mainSubject = mainSubject;
     }
 
     public Teacher() {}
@@ -54,13 +57,22 @@ public class Teacher {
         this.lastName = lastName;
     }
 
+    public String getMainSubject() {
+        return mainSubject;
+    }
+
+    public void setMainSubject(String mainSubject) {
+        this.mainSubject = mainSubject;
+    }
+
+    @JsonbTransient
     public Set<Subject> getSubjects() {
         return subjects;
     }
 
-    public void setSubjects(Set<Subject> subjects) {
-        this.subjects = subjects;
-    }
+//    public void setSubjects(Set<Subject> subjects) {
+//        this.subjects = subjects;
+//    }
 
 }
 
