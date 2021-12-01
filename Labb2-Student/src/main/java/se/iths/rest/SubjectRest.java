@@ -24,19 +24,12 @@ public class SubjectRest {
         return Response.ok(subject).build();
     }
 
-    @Path("getall")
+    @Path("")
     @GET
     public Response getAllSubjects() {
         List<Subject> listOfSubjects = subjectService.getAllSubjects();
         return Response.ok(listOfSubjects).build();
     }
-
-//    @Path("")
-//    @GET
-//    public Response getEverything() {
-//        List<Subject> everything = subjectService.getAllSubjectsStudentsAndTeachers();
-//        return Response.ok(everything).build();
-//    }
 
     @Path("{id}")
     @GET

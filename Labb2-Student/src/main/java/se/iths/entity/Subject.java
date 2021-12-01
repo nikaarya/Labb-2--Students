@@ -54,7 +54,6 @@ public class Subject {
         return teacher;
     }
 
-    //@JsonbTransient
     public Set<Student> getStudents() {
         return students;
     }
