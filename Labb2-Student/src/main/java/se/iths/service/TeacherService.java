@@ -1,6 +1,5 @@
 package se.iths.service;
 
-import se.iths.entity.Subject;
 import se.iths.entity.Teacher;
 
 import javax.persistence.EntityManager;
@@ -15,10 +14,6 @@ public class TeacherService {
     EntityManager entityManager;
 
     public Teacher createNewTeacher(Teacher teacher) {
-
-//        teacher.addSubject(new Subject("Math"));
-//        teacher.addSubject(new Subject("English"));
-
         entityManager.persist(teacher);
         return teacher;
     }

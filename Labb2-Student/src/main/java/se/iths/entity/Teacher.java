@@ -70,10 +70,6 @@ public class Teacher {
         return subjects;
     }
 
-//    public void setSubjects(Set<Subject> subjects) {
-//        this.subjects = subjects;
-//    }
-
 }
 
 
