@@ -16,7 +16,7 @@ public class Subject {
 
     @ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private Set<Student> students = new HashSet<>();
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Teacher teacher;
 
     public Subject(String name) {
@@ -45,7 +45,7 @@ public class Subject {
     public void setName(String name) {
         this.name = name;
     }
-    
+
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
     }
